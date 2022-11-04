@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
+        :root{
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --white: #FFFFFF;
+            --Blk: #000;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+        }
+        body{
+            font-family: 'Quicksand', sans-serif;
+        }
+        .my-order{
+            width: 100%;
+            height: 98vh;
+            display: grid;
+            place-items: center;
+            place-content: center;
+        }
+        .title{
+            font-size: var(--lg);
+            margin-bottom: 90px;
+        }
+        .my-order-container{
+            display: grid;
+            grid-template-rows: auto auto;
+            width: 300px;
+        }
+        .my-order-content{
+            display: grid;
+            grid-template-rows: 1fr;
+        }
+        .my-order-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            column-gap: 10px;
+        }
+        .my-order-total .article-total{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            row-gap: 10px; 
+
+        }
+        .my-order-total .article-total span:nth-child(1){
+            font-weight: bold;
+
+        }
+        .my-order-total p:nth-child(2){
+            font-weight: bold;
+
+        }
+       
+        
+        
+        
+
+</style>
+<body>
+    <div class="my-order">
+        
+        <div class="my-order-container">
+            <h1 class="title">my order</h1>
+            
+            <div class="my-order-content">
+  
+                <div class="my-order-total">
+                    <p class="article-total">
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./assets/Platzi_YardSale_Icons/flechita.svg" alt="">
+                </div>
+                <div class="my-order-total">
+                    <p class="article-total">
+                        <span>03.25.21</span>
+                        <span>6 articles</span>
+                    </p>
+                    <p>$560.00</p>
+                    <img src="./assets/Platzi_YardSale_Icons/flechita.svg" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
