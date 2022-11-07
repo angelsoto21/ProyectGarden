@@ -196,7 +196,7 @@ cursor: pointer;
     width: 320px;
     position: absolute;
     right: 10px;
-    top: 6%;
+   
 }
 .my-order-content{
     display: grid;
@@ -287,6 +287,7 @@ cursor: pointer;
         right: 0;
         left: 30px;
         width: 90%;
+        
     }
 }
 
