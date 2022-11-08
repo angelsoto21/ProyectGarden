@@ -5,11 +5,14 @@ let MenuMobile = document.querySelector('.mobile-menu');
 let carrito = document.querySelector('.navbar-shopping-cart');
 let carritoDeploy = document.querySelector('.my-order');
 let cardsContainer = document.querySelector('.cards-container');
+let ProductDetail = document.querySelector('.container');
+let cerrarDetail = document.querySelector('.background-img');
 
 email.addEventListener("click", toggleDesktoMenu);
 function toggleDesktoMenu(event) {
     menu.classList.toggle('inactive');
     carritoDeploy.classList.add('inactive');
+    ProductDetail.classList.add('inactive');
 }
 
 MenuDeploy.addEventListener("click", toggleMobileMenu);
@@ -23,7 +26,21 @@ function DeployShoppingCart(event){
     carritoDeploy.classList.toggle('inactive');
     menu.classList.add('inactive');
     MenuMobile.classList.add('inactive');
+    ProductDetail.classList.add('inactive');
+
 }
+function openproductdetail(event){
+    console.log('imagen presionada');
+    ProductDetail.classList.remove('inactive');
+    carritoDeploy.classList.add('inactive');
+    menu.classList.add('inactive');
+}
+cerrarDetail.addEventListener('click', CloseDetails);
+function CloseDetails(event){
+    ProductDetail.classList.add('inactive');
+    
+}
+
 
 const productList = [];
 productList.push ({
@@ -79,6 +96,8 @@ for (product of productList) {
    const img = document.createElement('img');
    img.setAttribute('src', product.image);
    img.classList.add('product-img');
+   img.addEventListener('click', openproductdetail);
+   
 
    const productInfo = document.createElement('div');
    productInfo.classList.add('informacion');
