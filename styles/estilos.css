@@ -105,7 +105,8 @@ cursor: pointer;
     border-top: 0px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    z-index: -1;
+    background-color: var(--white);
+    top: 61px;
 }
 .desktop-menu ul{
     list-style: none;
@@ -135,9 +136,13 @@ cursor: pointer;
     text-decoration: none;
 }
 .mobile-menu{
+    width: calc(100% - 48px);
+    height: calc(100% - 110px);
+    left: 0;
+    background-color: white;
     padding: 24px;
     position: absolute;
-    top: 35px;
+    top: 61px;
 }
 .mobile-menu a{
     text-decoration: none;
@@ -164,10 +169,7 @@ cursor: pointer;
     font-size: var(--sm);
 }
 
-.mobile-menu ul:nth-child(4){
-    position: absolute;
-    bottom: -100px;
-}
+
 .my-order{
     width: 100%;
     height: 100%;
@@ -193,15 +195,16 @@ cursor: pointer;
 .my-order-container{
     display: grid;
     grid-template-rows: auto auto;
-    width: 320px;
+    width: 360px;
     position: absolute;
     right: 10px;
-    top: 6%;
+    background-color: white;
+   
 }
 .my-order-content{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    padding: 0px 10px;
+    padding: 0px 15px;
     margin-top: 10px;
     gap: 20px;
 }
@@ -254,6 +257,121 @@ color: white;
 font-weight: bold;
 cursor: pointer;
 }
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,300px);
+    gap: 26px;
+    place-content: center;
+    margin: 20px 20px 0px 20px;
+}
+.product-card{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.product-img{
+    width: 300px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.icon__product figure img{
+    width: 40px;
+    height: 40px;
+}
+.icon__product figure{
+   margin: 0;
+}
+.informacion p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 16px;
+    margin-bottom: 4px;
+}
+.informacion p:nth-child(2){
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 4px;
+    color: var(--very-light-pink);
+}
+
+.container{
+    background-color: white;
+    margin-top: 150px;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    width: 400px;
+    margin-top: 1px;
+    position: absolute;
+    right: 0px;
+    top: 80px;
+    padding-left: 5px;
+}
+.container > img{
+    width: 400px;
+    height: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+    position: relative;
+}
+.container .background-img img{
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    z-index: 4;
+}
+.container .background-img{
+    width: 14px;
+    height: 15px;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--white);
+    padding: 10px;
+    border-radius: 50%;
+    top: 12px;
+        left: 12px;
+}
+.container .background-img:hover{
+    cursor: pointer;
+}
+.description{
+    margin: 0px 34px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.price-product{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px 8px;
+}
+.price-product span:nth-child(1){
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+.price-product span:nth-child(2) , .description > p:nth-child(2){
+    color: var(--very-light-pink);
+}
+.description p:nth-child(2){
+    padding: 0px 8px;
+}
+
+.container .description .primary-button{
+    height: 55px;
+    background-color: var(--hospital-green);
+    border: 0px;
+    border-radius: 6px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
 
 @media (max-width: 640px) {
     .MenuDeploy{
@@ -279,7 +397,6 @@ cursor: pointer;
         column-gap: 0px;
         padding-left: 10px;
         justify-items: center;
-        margin-bottom: 20px;
     }
     .my-order-container{
         position: relative;
@@ -287,9 +404,39 @@ cursor: pointer;
         right: 0;
         left: 30px;
         width: 90%;
+        
     }
-}
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,150px);
+    }
+    
+    .product-img{
+        width: 150px;
+        height: 150px;
+    }
+    .container {
+        flex-direction: column;
+        margin: 0px;
+        margin-top: 30px;
+        position: absolute;
+        width: 100%;
+        margin-bottom: 300px;
+    }
+    .description {
+        margin-top: 30px;
+    }
+    .container > img{
+        position: relative;
+        width: 90%;
+        margin-left: 20px;
+    }
+    .container .background-img{
+        top: 12px;
+        left: 30px;
+    }
 
+}
 
 @media (min-width: 641px) {
     .mobile-menu{
